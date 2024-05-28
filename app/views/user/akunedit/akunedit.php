@@ -103,7 +103,7 @@
 <script>
   function InvalidMsg(textbox) {
     if (textbox.value == '') {
-      textbox.setCustomValidity('lengkapi data anda');
+      textbox.setCustomValidity('Lengkapi data! ');
     }
     else if (textbox.validity.typeMismatch) {
       textbox.setCustomValidity('');
