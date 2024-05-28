@@ -103,10 +103,10 @@
 <script>
   function InvalidMsg(textbox) {
     if (textbox.value == '') {
-      textbox.setCustomValidity('Lengkapi Data');
+      textbox.setCustomValidity('lengkapi data anda');
     }
     else if (textbox.validity.typeMismatch) {
-      textbox.setCustomValidity('Lütfen işaretli yere geçerli bir email adresi yazınız.');
+      textbox.setCustomValidity('');
     }
     else {
       textbox.setCustomValidity('');

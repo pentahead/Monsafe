@@ -84,10 +84,10 @@
     <script>
       function InvalidMsg(textbox) {
         if (textbox.value == '') {
-          textbox.setCustomValidity('Lengkapi Data');
+          textbox.setCustomValidity('lengkapi data anda');
         }
         else if (textbox.validity.typeMismatch) {
-          textbox.setCustomValidity('Lütfen işaretli yere geçerli bir email adresi yazınız.');
+          textbox.setCustomValidity('');
         }
         else {
           textbox.setCustomValidity('');
@@ -104,4 +104,5 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 </body>
+
 </html>

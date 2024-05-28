@@ -20,12 +20,13 @@ class AkuneditM
         }
     }
 
-    public function updateUserProfile($id, $nama_pemilik, $username, $email, $alamat_usaha, $password) {
+    public function updateUserProfile($id, $nama_pemilik, $username, $email, $alamat_usaha, $password)
+    {
         try {
             // Mulai membangun kueri SQL untuk UPDATE
             $sql = "UPDATE data_pemilik SET ";
             $setArray = []; // Array untuk menyimpan bagian SET dari kueri SQL
-    
+
             // Cek dan tambahkan setiap kolom yang diperbarui ke array
             if (!empty($nama_pemilik)) {
                 $setArray[] = "nama_pemilik = :nama_pemilik";
@@ -40,13 +41,15 @@ class AkuneditM
                 $setArray[] = "alamat_usaha = :alamat_usaha";
             }
             if (!empty($password)) {
+                // Hash password sebelum menyimpannya
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                 $setArray[] = "password = :password";
             }
-    
+
             // Gabungkan setiap bagian SET dengan koma dan tambahkan ke kueri SQL
             $sql .= implode(", ", $setArray);
             $sql .= " WHERE id_pemilik = :id";
-    
+
             // Jalankan kueri SQL
             $this->db->query($sql);
             $this->db->bind(':id', $id);
@@ -63,15 +66,16 @@ class AkuneditM
                 $this->db->bind(':alamat_usaha', $alamat_usaha);
             }
             if (!empty($password)) {
-                $this->db->bind(':password', $password);
+                $this->db->bind(':password', $hashedPassword);
             }
-    
+
             // Eksekusi kueri dan kembalikan hasilnya
             return $this->db->execute();
         } catch (PDOException $e) {
             return false;
         }
     }
+
     public function countnotif()
     {
         try {
@@ -81,7 +85,7 @@ class AkuneditM
             data_monitoring dm
         WHERE 
             dm.id_notifikasi = 1;");
-            return $this->db->single(); 
+            return $this->db->single();
         } catch (PDOException $e) {
             die($e->getMessage());
         }
