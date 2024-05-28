@@ -1,0 +1,19 @@
+{
+    "name": "azrie/bas",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Azrie\\Bas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AZR88",
+            "email": "azrielamaldany@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}

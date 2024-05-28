@@ -1,0 +1,1 @@
+{"version":1,"defects":{"AdminTest::testCheckAdminLogin":7,"EditDataBarangModelTest::testUpdateDataBarang":8},"times":{"UserTest::testCheckUserLogin":0.017,"UserTest::testRegisterUser":0.001,"AdminTest::testCheckAdminLogin":0.071,"EditDataBarangModelTest::testUpdateDataBarang":0.016,"ProductUpdaterTest::testUpdateProduct":0.037}}

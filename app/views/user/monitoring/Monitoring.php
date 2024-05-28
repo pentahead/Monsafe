@@ -1,0 +1,47 @@
+<!-- Page Wrapper -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="row justify-content-center">
+    <?php foreach ($data['detail'] as $detail): ?> <!-- Melakukan iterasi melalui setiap detail -->
+      <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card h-100 ">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <div class="bg-primary text-white text-center py-3 rounded-left ">
+                <div class="font-weight-bold mb-1">Kadar Amonia (ppm)</div>
+                <div class="h5  display-4 font-weight-bolder"><?php echo $detail['konsentrasi_amonia']; ?></div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="font-weight-bold text-primary mb-1">
+                Pembaruan terakhir</div>
+              <div class="h6 mb-2  text-gray-800"><?php echo $detail['waktu_tanggal']; ?></div>
+              <div class="font-weight-bold text-primary mb-1">
+                Kolam Ikan</div>
+              <div class="h6 mb-0  text-gray-800"><?php echo $detail['area_kolam']; ?></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+  <div class="my-4"></div>
+  <div class="d-sm-flex align-items-center justify-content-center mb-4">
+    <h1 class="h1 display-4 text-center font-weight-bolder text-dark ">Perhatikan Lebih Lanjut Kolam
+      Ikanmu!
+    </h1>
+  </div>
+  <div class="d-flex justify-content-center">
+    <a href="<?php echo BASEURL; ?>/?controller=areamonitoring" class="btn btn-dark btn-icon-split align-items-center"
+      style="width: 30%;">
+      <span class="text">Area Monitoring</span>
+      <span class="icon text-white">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  </div>
+  <div class="my-4"></div>
+</div>
+</div>
+<!-- End of Page Wrapper -->
