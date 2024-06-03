@@ -47,8 +47,8 @@
   <!-- End of Main Content -->
   <div class="d-flex justify-content-center">
     <a href="<?php echo BASEURL; ?>/?controller=Monitoring" class="btn btn-dark btn-icon-split align-items-center"
-      style="width: 30%;">
-      <span class="text">Monitoring</span>
+      style="width: 30%; min-width: 200px;"">
+      <span class=" text">Monitoring</span>
       <span class="icon text-white">
         <i class="fas fa-arrow-right"></i>
       </span>

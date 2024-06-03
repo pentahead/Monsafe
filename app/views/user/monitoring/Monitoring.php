@@ -33,8 +33,8 @@
     </h1>
   </div>
   <div class="d-flex justify-content-center">
-    <a href="<?php echo BASEURL; ?>/?controller=areamonitoring" class="btn btn-dark btn-icon-split align-items-center"
-      style="width: 30%;">
+    <a href="<?php echo BASEURL; ?>/?controller=areamonitoring" class="btn btn-dark btn-icon-split align-items-center "
+      style="width: 30%; min-width: 200px;">
       <span class="text">Area Monitoring</span>
       <span class="icon text-white">
         <i class="fas fa-arrow-right"></i>

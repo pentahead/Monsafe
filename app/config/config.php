@@ -10,4 +10,3 @@ define("DB_NAME", "monsafe");
 // base
 define("BASEURL", "/Monsafe");
 
-?>
